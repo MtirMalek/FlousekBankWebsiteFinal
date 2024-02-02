@@ -1,0 +1,85 @@
+<div style="margin: 50px;">
+    <!-- ngform 
+    <form #esmform="ngForm" (ngSubmit)="add(esmform)" >
+        <h5>Firstname</h5>
+        <input #firstname="ngModel" class="form-control" type="text" placeholder="firstname" name="firstname" ngModel required>
+        <div class="alert alert-primary" *ngIf="firstname.errors?.['required']  && firstname.touched "  role="alert">
+            this input is required !
+        </div>
+        <br>
+        <h5>Numero Tel</h5>
+        <input #Numero="ngModel" class="form-control" type="text" placeholder="Numero" name="Numero" ngModel required minlength="8">
+        <div class="alert alert-primary" *ngIf="Numero.errors?.['required']  && Numero.touched "  role="alert">
+            this input is required !
+        </div>
+        <div class="alert alert-primary" *ngIf="Numero.errors?.['minlength']  && Numero.touched "  role="alert">
+            Numero tel should be 8 number !
+        </div>
+        <br>
+        <h5>Age</h5>
+        <input #Age="ngModel" class="form-control" type="number" placeholder="Age" name="Age" ngModel required>
+        <div class="alert alert-primary" *ngIf="Age.errors?.['required']  && Age.touched "  role="alert">
+            this input is required !
+        </div>
+        <br>
+        <button  type="submit" [disabled]="esmform.invalid"> Add</button>
+    
+    </form> -->
+    <!-- reactive form -->
+    <form style="margin-top:40px ;" [formGroup]="myForm" (ngSubmit)="addtrans(myForm)" >
+        <h5>Cin</h5>
+        <input formControlName="cin"  class="form-control" type="text" placeholder="CIN" required>
+        <div class="alert alert-primary" *ngIf="myForm.get('cin').hasError('required') && myForm.get('cin').touched "  role="alert">
+            this input is required !
+        </div>
+        <div class="alert alert-primary" *ngIf="myForm.get('cin').hasError('minlength') && myForm.get('cin').touched "  role="alert">
+            Enter CIN Valid !
+        </div>
+        <div class="alert alert-primary" *ngIf="myForm.get('cin').hasError('maxlength') && myForm.get('cin').touched "  role="alert">
+            Enter CIN Valid !
+        </div>
+        <br>
+        <h5>Card Number Receiver</h5>
+        <input formControlName="carta" class="form-control" type="text" placeholder="Numero carte Dest" required>
+        <div class="alert alert-primary" *ngIf="myForm.get('carta').hasError('required') && myForm.get('carta').touched "  role="alert">
+            this input is required !
+        </div>
+        <br>
+        <h5>Amount (TND)</h5>
+        <input formControlName="montant" class="form-control" type="text" placeholder="Montant" required>
+        <div class="alert alert-primary" *ngIf="myForm.get('montant').hasError('required') && myForm.get('montant').touched "  role="alert">
+            this input is required !
+        </div>
+        <div class="alert alert-primary" *ngIf="myForm.get('montant').hasError('min') && myForm.get('montant').touched "  role="alert">
+            minimum 1 TND !
+        </div>
+        <br>
+        <!--
+            <div formArrayName="items">
+            <h5>Add new transaction:</h5>
+            <div *ngFor=" let item of myForm.controls.items['controls'];index as i" [formGroupName]="i">
+                
+                <div>New transaction:</div>
+                <strong>Cin :</strong>
+                <input style="margin: 10px;"  type="number" formControlName="id" value="i">
+                
+                <strong>Card Number Receiver :</strong>
+                <input style="margin: 10px;"   type="number" formControlName="title">
+                <strong>Amount :</strong>
+                <input style="margin: 10px;"   type="number" formControlName="montant">
+                <button >-</button>
+            </div>
+            <button (click)="addnewitem()" >+</button>
+        </div>>-->
+        <br>
+        <button type="submit" [disabled]="myForm.invalid">Submit</button>
+    </form>
+    <div>
+        {{msg}}
+    </div>
+    </div>
+    
+<!--<div style="margin: 50px; font-size: 50px;">
+    {{num}}
+</div>-->
+

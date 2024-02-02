@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<div class="h-screen d-flex justify-content-center align-items-center gap-3">
+    <div class="d-flex flex-column gap-3 w-300">
+        <h2 class="text-2xl font-semibold text-gray-700">Connexion</h2>
+
+        <form [formGroup]="loginForm" class="d-flex flex-column gap-3">
+            <div class="d-flex flex-column mt-4 mb-1">
+                <input formControlName="email" class="text-sm p-2 rounded-2xl bg-slate-200 outline-none tracking-widest text-gray-600" type="text" placeholder="Email">
+                <span *ngIf="loginForm.hasError('required','email') && loginForm.controls['email'].dirty" class="text-red-500">*L'email est requis</span>
+                <span *ngIf="loginForm.hasError('email','email')" class="text-red-500">*L'email n'est pas valide</span>
+            </div>
+            <div class="d-flex flex-column mt-4 mb-1">
+                <input formControlName="password" class="text-sm p-2 rounded-2xl bg-slate-200 outline-none tracking-widest text-gray-600" type="password" placeholder="Mot de passe">
+                <span *ngIf="loginForm.hasError('required','password') && loginForm.controls['password'].dirty" class="text-red-500">*Le mot de passe est requis</span>
+            </div>
+            <button [disabled]="loginForm.invalid" [class.disabled]="loginForm.invalid" (click)="login()" class="btn btn-primary text-white tracking-wider p-2 rounded-2xl hover:bg-slate-800 transition">Connexion</button>
+        </form>
+
+        <div class="d-flex flex-column align-items-start gap-3">
+            <span></span><a routerLink="/forget-password" class="text-sm text-gray-500">Mot de passe oublié ?</a>
+            <span></span><a routerLink="/register" class="text-sm text-gray-500">Créer un compte</a>
+        </div>
+    </div>
+    <div class="relative w-600 d-grid place-items-center">
+        <img src="https://genhq.com/wp-content/uploads/2018/09/GenZBanking2Final.gif" class="absolute rounded-2xl" id="animimg">
+    </div>
+</div>

@@ -1,0 +1,22 @@
+.responsiveSmallscreen{
+    @media (max-width: 770px) {
+        /* Styles spécifiques pour les écrans très petits ici */
+        width: 300px;
+      }
+}
+.styleselector{
+    padding: 5px;border-radius: 20px;
+}
+.styleconvertisseur{
+    border:1px black solid;padding: 20px;border-radius: 20px;
+}
+.pagecontainer{
+    margin-top: 60px; margin-left: 20px;  font-family: 'philosopher'; 
+}
+.respnsiveXSmallScreen{
+    @media (max-width: 576px) {
+        /* Styles spécifiques pour les écrans très petits ici */
+        flex: 1;
+      }
+
+}

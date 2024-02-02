@@ -1,0 +1,41 @@
+
+.responsiveSmallscreen{
+    @media (max-width: 770px) {
+        /* Styles spécifiques pour les écrans très petits ici */
+        width: 300px;
+      }
+}
+.imgSmallscreen{
+    @media (max-width: 770px) {
+        /* Styles spécifiques pour les écrans très petits ici */
+        width: 400px;
+      }
+}
+.activityitems{
+    color: #A4A7AE;font-family: Arial, Helvetica, sans-serif;
+}
+.activityitems:hover{
+    color:rgb(72, 126, 207);
+    font-weight: bold;
+
+}
+.Align{
+    display: flex; align-items: center;
+    flex-direction: column;justify-content: center;
+    padding-top: 40px;
+}
+.soustitre{
+    font-weight: bold; font-family: 'Philosopher';margin-left:38px
+}
+app-carousel{
+    margin-top:50px;
+}
+.margin80{
+    margin-top:80px;
+}
+.activitycard{
+    padding: 0; margin: 0;display: flex;box-shadow: 2px 8px 10px rgb(88, 120, 167);border-color: rgb(88, 120, 167);background-color: white; display: flex; flex-direction: column; justify-content: center ;box-shadow: 2px 4px 4 black; padding: 30px; max-width: 700px;
+}
+.acitivtysoustitre{
+    margin-bottom:30px
+}

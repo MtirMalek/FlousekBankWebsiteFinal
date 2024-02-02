@@ -1,0 +1,102 @@
+
+<div class="wrapper">
+    <aside id="sidebar">
+            <div  style=" display: flex; flex-direction: column; align-items: center;  margin-top: 20px;">
+                <div >
+                    <a routerLink="/"><img src="../assets/images/finallogo1.png" style="width: 50px; height: 50px ;" alt=""></a>
+                    
+                </div>
+                
+                <div class="sidebar-logo">
+                    <a routerLink="/">FlousekBank</a>
+                </div>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item" *ngIf="VerifAdmin">
+                    <a routerLink="/homeadmin" class="sidebar-link">
+                        <div class="into-sidebar-item"   >
+                            <i class="lni lni-user"></i>
+                            <span >Dashboard</span>
+                        </div>  
+                    </a>
+                </li>
+                <li class="sidebar-item"*ngIf="VerifAdmin">
+                    <a routerLink="/comptes" class="sidebar-link">
+                        <div class="into-sidebar-item">
+                        <i  class="lni lni-agenda"></i>
+                        <span>Acount</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-item"*ngIf="VerifAdmin">
+                    <a href="http://192.168.1.15:8080/browserfs.html" class="sidebar-link">
+                        <div class="into-sidebar-item">
+                        <i  class="lni lni-camera"></i>
+                        <span>Check cameras</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-item" *ngIf="!VerifAdmin">
+                    <a routerLink="/" class="sidebar-link">
+                        <div class="into-sidebar-item"   >
+                            <i class="lni lni-user"></i>
+                            <span >Dashboard</span>
+                        </div>  
+                    </a>
+                </li>
+                <li class="sidebar-item" *ngIf="!VerifAdmin">
+                    <a routerLink="/card" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                        <div class="into-sidebar-item">
+                        <i class="lni lni-credit-cards"></i>
+                        <span>Card</span></div>
+                    </a>
+    
+                </li>
+                <li class="sidebar-item"*ngIf="!VerifAdmin">
+                    <a routerLink="/profil" class="sidebar-link">
+                        <div class="into-sidebar-item">
+                        <i  class="lni lni-agenda"></i>
+                        <span>Account</span>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="sidebar-item"*ngIf="!VerifAdmin" >
+                    <a routerLink="/transaction" class="sidebar-link">
+                        <div class="into-sidebar-item">
+                        <i class="lni lni-popup"></i>
+                        <span>Transaction </span></div>
+                    </a>
+                </li>
+                
+                
+                
+                <div style="border-bottom: 1px solid #fff; margin:30px 10px" *ngIf="!VerifAdmin"></div>
+                <li class="sidebar-item"*ngIf="!VerifAdmin">
+                    <a routerLink="/convert" class="sidebar-link">
+                        <div class="into-sidebar-item">
+                        <i class="lni lni-popup"></i>
+                        <span>Converter</span></div>
+                    </a>
+                </li>
+                <li class="sidebar-item"*ngIf="!VerifAdmin" >
+                    <a routerLink="/about" class="sidebar-link">
+                        <div class="into-sidebar-item">
+                            <i class="lni lni-linkedin-original"></i>
+                        <span>Contact us</span></div>
+                    </a>
+                </li>
+                <div class="sidebar-footer" >
+                    <a routerLink="/login" class="sidebar-link">
+                        <div class="into-sidebar-item">
+                        <i class="lni lni-exit"></i>
+                        <span>Logout</span></div>
+                    </a>
+                </div>
+            </ul>
+            </aside>
+</div>
+    
+    
+    

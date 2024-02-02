@@ -1,0 +1,7 @@
+.respnsiveXSmallScreen{
+    @media (max-width: 576px) {
+        /* Styles spécifiques pour les écrans très petits ici */
+        flex: 1;
+      }
+
+}

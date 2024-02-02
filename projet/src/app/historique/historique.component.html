@@ -1,0 +1,41 @@
+<h5 class="titre soustitre" >History</h5><div class="container-fluid"  >
+    <div class="row " >
+      <div class=" col-sm-2 p-2 fw-bold respnsiveXSmallScreen " style="color: #A4A7AE;" >
+        index
+      </div>
+      <div class=" col-sm-3 p-2 fw-bold respnsiveXSmallScreen" style="color: #A4A7AE;" >
+        Operation Date 
+      </div>
+      <div class=" col-sm-3 p-2 fw-bold respnsiveXSmallScreen" style="color: #A4A7AE;" >
+        Operation
+      </div>
+      <div class=" col-sm-3 p-2 fw-bold respnsiveXSmallScreen" style="color: #A4A7AE;" >
+        Amount
+      </div>
+      <div class="col-sm-12 border-bottom ">
+  
+      </div>
+    </div>
+    <div>
+      <div class="row " *ngFor="let t of tab ;index as i" >
+        <div class=" col-sm-2 p-2 respnsiveXSmallScreen" >
+         {{i}}
+        </div>
+        <div class=" col-sm-3 p-2 respnsiveXSmallScreen">
+          {{t.First}}
+        </div>
+        <div class=" col-sm-3 p-2 respnsiveXSmallScreen">
+          {{t.Last}}
+        </div>
+        <div class=" col-sm-3 p-2 respnsiveXSmallScreen">
+          {{t.handle}}
+        </div>
+        <div class="col-sm-12 border-bottom ">
+    
+        </div>
+      </div>
+    </div>
+      
+      
+   
+  </div>

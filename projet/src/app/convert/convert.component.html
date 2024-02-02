@@ -1,0 +1,168 @@
+<div class="pagecontainer" >
+         <h5>Convert</h5> 
+         <div class="column">
+            <div class="col-sm-8 styleconvertisseur" >
+                Amount
+                
+                    <div class="my-2"   ><input style="width: 250px;" type="text">
+                    <div class="resultat"></div>
+                    </div>
+                <div class="row">
+                    <div class="col-sm-3"  >
+                        <select class="styleselector" id="genre" [(ngModel)]="selecteddevise" name="genre">
+                            <option *ngFor="let Devise of devise" [value]="Devise">{{ Devise }}</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3">
+                        <select class="styleselector"  id="genre2" [(ngModel)]="selecteddevisetarget" name="genre">
+                            <option *ngFor="let genre of devise" [value]="genre">{{ genre }}</option>
+                        </select>
+            
+                    </div>
+                    <div  class="col-sm-3 ">
+                        <button  style="background-color: rgb(68, 109, 169); color: white; border: none;" class="styleselector px-4" >Convert</button>
+                    </div>
+                </div>
+                
+                
+                
+             </div>
+             
+             <h6 class="my-4">Currencies List</h6>
+             <div style="text-align: center; font-weight: 100 ; font-family: Arial, Helvetica, sans-serif;"> Foreign exchange rates in Tunisian Dinar on: <strong>{{date}}</strong> </div>
+             <div class="col-sm-9  my-2 " style="justify-content: start; padding: 0; "  >   
+                
+                <div class="row " >
+                  <div class=" col-sm-2 p-2 fw-bold respnsiveXSmallScreen " style="color: #A4A7AE;" >
+                    
+                  </div>
+                  <div class=" col-sm-3 p-2 fw-bold respnsiveXSmallScreen" style="color: #A4A7AE;" >
+                    Currency
+                  </div>
+                  <div class=" col-sm-3 p-2 fw-bold respnsiveXSmallScreen" style="color: #A4A7AE;" >
+                    Buy( by bank)
+                  </div>
+                  <div class=" col-sm-3 p-2 fw-bold respnsiveXSmallScreen" style="color: #A4A7AE;" >
+                    Sell(by bank)
+                  </div>
+                  
+                </div>
+                <div>
+                  <div class="row " style="margin-top: 10px;align-items: center; border: none; border-radius: 20px; box-shadow: 3px 4px 10px rgb(88, 120, 167);"  >
+                    <div class=" col-sm-2 p-2 respnsiveXSmallScreen" >
+                     <img src="../assets/images/americia.png" class="img-fluid" alt="">
+                    </div>
+                    <div class=" col-sm-3 p-2 respnsiveXSmallScreen">
+                        AMERICAN DOLLAR 
+                    </div>
+                    <div class=" col-sm-3 p-2 respnsiveXSmallScreen" style="color:#dc3545">
+                        3.098
+                    </div>
+                    <div class=" col-sm-3 p-2 respnsiveXSmallScreen">
+                        3.163
+                    </div>
+                    
+                
+                    </div>
+                    <div class="row " style="margin-top: 10px;align-items: center; border: none; border-radius: 20px; box-shadow: 3px 4px 10px rgb(88, 120, 167);"  >
+                        <div class=" col-sm-2 p-2 respnsiveXSmallScreen" >
+                         <img src="../assets/images/euro.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class=" col-sm-3 p-2 respnsiveXSmallScreen">
+                            EURO
+                        </div>
+                        <div style="color:#dc3545" class=" col-sm-3 p-2 respnsiveXSmallScreen">
+                            3.335
+                        </div>
+                        <div class=" col-sm-3 p-2 respnsiveXSmallScreen">
+                            3.421
+                        </div>
+                        
+                    
+                        </div>
+                        <div class="row " style="margin-top: 10px;align-items: center; border: none; border-radius: 20px; box-shadow: 3px 4px 10px rgb(88, 120, 167);"  >
+                            <div class=" col-sm-2 p-2 respnsiveXSmallScreen" >
+                             <img src="../assets/images/canada.png" class="img-fluid" alt="">
+
+
+                            </div>
+                            <div class=" col-sm-3 p-2 respnsiveXSmallScreen">
+                                 CANADIAN DOLLAR
+                            </div>
+                            <div style="color:#dc3545" class=" col-sm-3 p-2 respnsiveXSmallScreen">
+                                2.302
+                            </div>
+                            <div class=" col-sm-3 p-2 respnsiveXSmallScreen">
+                                2.372
+                            </div>
+                            
+                        
+                            </div>
+                            <div class="row " style="margin-top: 10px;align-items: center; border: none; border-radius: 20px; box-shadow: 3px 4px 10px rgb(88, 120, 167);"  >
+                                <div class=" col-sm-2 p-2 respnsiveXSmallScreen" >
+                                 <img src="../assets/images/qatar1.png" class="img-fluid" alt="">
+                                </div>
+                                <div class=" col-sm-3 p-2 respnsiveXSmallScreen">
+                                    RYAL QATARI
+                                </div>
+                                <div style="color:#dc3545" class=" col-sm-3 p-2 respnsiveXSmallScreen">
+                                    0.8409
+                                </div>
+                                <div class=" col-sm-3 p-2 respnsiveXSmallScreen">
+                                    0.8687
+                                </div>
+                                
+                            
+                                </div>
+                                <div class="row " style="margin-top: 10px;align-items: center; border: none; border-radius: 20px; box-shadow: 3px 4px 10px rgb(88, 120, 167);"  >
+                                    <div class=" col-sm-2 p-2 respnsiveXSmallScreen" >
+                                     <img src="../assets/images/saudia.png" class="img-fluid" alt="">
+
+
+                                    </div>
+                                    <div class=" col-sm-3 p-2 respnsiveXSmallScreen">
+                                        RYAL SAOUDIEN
+                                    </div>
+                                    <div style="color:#dc3545" class=" col-sm-3 p-2 respnsiveXSmallScreen">
+                                        0.8255
+                                    </div>
+                                    <div class=" col-sm-3 p-2 respnsiveXSmallScreen">
+                                        0.8555
+                                    </div>
+                                    
+                                
+                                    </div>
+                                    <div class="row " style="margin-top: 10px;align-items: center; border: none; border-radius: 20px; box-shadow: 3px 4px 10px rgb(88, 120, 167);"  >
+                                        <div class=" col-sm-2 p-2 respnsiveXSmallScreen" >
+                                            
+                                         <img src="../assets/images/uk.png" class="img-fluid" alt="">
+
+
+                                        </div>
+                                        <div class=" col-sm-3 p-2 respnsiveXSmallScreen">
+                                            Pound
+                                        </div>
+                                        <div style="color:#dc3545" class=" col-sm-3 p-2 respnsiveXSmallScreen">
+                                            3.900
+                                        </div>
+                                        <div class=" col-sm-3 p-2 respnsiveXSmallScreen">
+                                            4.009
+                                        </div>
+                                        
+                                    
+                                        </div>
+                    
+                    
+                </div>
+                
+                  
+                  
+        </div>
+    </div>
+</div>
+
+         
+        
+       
+
+

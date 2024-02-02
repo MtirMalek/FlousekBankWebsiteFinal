@@ -1,0 +1,10 @@
+.respnsiveXSmallScreen{
+    @media (max-width: 576px) {
+        /* Styles spécifiques pour les écrans très petits ici */
+        flex: 1;
+      }
+
+}
+.soustitre{
+  font-weight: bold; font-family: 'Philosopher';margin-left:38px
+}
